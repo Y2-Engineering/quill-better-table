@@ -3,4 +3,7 @@ node_modules
 *-lock.json
 .DS_Store
 *.log
+.mcp.json
 .idea
+.vscode
+.claude/settings.local.json
