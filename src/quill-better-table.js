@@ -30,7 +30,8 @@ import {
 
 import {
   TableListContainer,
-  TableList
+  TableList,
+  CheckedAttributor
 } from './formats/list';
 
 class BetterTable extends Module {
@@ -46,6 +47,7 @@ class BetterTable extends Module {
     Quill.register(TableViewWrapper, true);
     Quill.register(TableListContainer, true);
     Quill.register(TableList, true);
+    Quill.register(CheckedAttributor, true);
     // Extend TableCell.allowedChildren with TableListContainer here (not at list.js
     // module-eval time) so that HMR re-registrations refresh the reference too —
     // otherwise stale class refs in allowedChildren cause enforceAllowedChildren's

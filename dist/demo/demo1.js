@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "7ac507d877ae6a058cf3";
+/******/ 	var hotCurrentHash = "d68d898286a76422a1ff";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -2745,10 +2745,23 @@ function matchTable(node, delta, scroll) {
 
 const ListContainer = external_commonjs_quill_commonjs2_quill_amd_quill_root_Quill_default.a.import('formats/list-container');
 const ListItem = external_commonjs_quill_commonjs2_quill_amd_quill_root_Quill_default.a.import('formats/list');
+const Parchment = external_commonjs_quill_commonjs2_quill_amd_quill_root_Quill_default.a.import('parchment');
+
+// Jira-style single-tri-state checklist: one list type 'check' with an
+// orthogonal data-checked attribute. Parallel to native Quill's 'checked' /
+// 'unchecked' pair (two list types, no attribute).
+const CheckedAttributor = new Parchment.Attributor('checked', 'data-checked', {
+  scope: Parchment.Scope.BLOCK
+});
 class TableListContainer extends ListContainer {
+  static getTag(value) {
+    const listValue = typeof value === 'string' ? value : value && value.value;
+    if (listValue === 'bullet' || listValue === 'check') return 'UL';
+    return 'OL';
+  }
   static create(value) {
-    const node = super.create(value);
-    if (value && value.row) {
+    const node = document.createElement(this.getTag(value));
+    if (value && typeof value === 'object' && value.row) {
       node.setAttribute('data-row', value.row);
     }
     return node;
@@ -2770,8 +2783,14 @@ class TableListContainer extends ListContainer {
   checkMerge() {
     if (!super.checkMerge()) return false;
     if (this.next == null || this.next.children.head == null) return false;
+    // Same tag only — bullet/check (UL) must not merge with ordered (OL).
+    if (this.domNode.tagName !== this.next.domNode.tagName) return false;
     const thisRow = this.domNode.getAttribute('data-row');
     const nextRow = this.next.domNode.getAttribute('data-row');
+    // Non-cell lists: plain same-tag merge (matches native ListContainer behavior).
+    if (!thisRow && !nextRow) return true;
+    // One side has cell identity, other does not → boundary, don't merge.
+    if (!thisRow || !nextRow) return false;
     if (thisRow !== nextRow) return false;
     const thisTailLi = this.children.tail;
     const nextHeadLi = this.next.children.head;
@@ -2783,12 +2802,36 @@ class TableListContainer extends ListContainer {
   }
 }
 TableListContainer.blotName = 'list-container';
-TableListContainer.tagName = 'OL';
+TableListContainer.tagName = ['OL', 'UL'];
+TableListContainer.defaultTag = 'OL';
 class list_TableList extends ListItem {
   static register() {
     // Override the inherited ListItem.register() which would re-register the native
     // ListContainer and clobber our TableListContainer.
     external_commonjs_quill_commonjs2_quill_amd_quill_root_Quill_default.a.register(TableListContainer, true);
+    external_commonjs_quill_commonjs2_quill_amd_quill_root_Quill_default.a.register(CheckedAttributor, true);
+  }
+  constructor(scroll, domNode) {
+    super(scroll, domNode);
+    // ListItem constructor attaches a uiNode <span class="ql-ui"> for
+    // native checkbox (checked/unchecked) toggling. Tag it for the Jira-style
+    // single 'check' type so our CSS can render the checkbox.
+    if (domNode.getAttribute('data-list') === 'check') {
+      this._applyCheckUi();
+    }
+  }
+  _applyCheckUi() {
+    if (this.uiNode) {
+      this.uiNode.classList.add('ql-check');
+      this.uiNode.setAttribute('contenteditable', 'false');
+    }
+    if (!this.domNode.hasAttribute('data-checked')) {
+      this.domNode.setAttribute('data-checked', 'false');
+    }
+  }
+  _removeCheckUi() {
+    if (this.uiNode) this.uiNode.classList.remove('ql-check');
+    this.domNode.removeAttribute('data-checked');
   }
   static create(value) {
     if (typeof value === 'string') {
@@ -2797,6 +2840,9 @@ class list_TableList extends ListItem {
       };
     }
     const node = super.create(value.value);
+    if (value.value === 'check' && !node.hasAttribute('data-checked')) {
+      node.setAttribute('data-checked', 'false');
+    }
     CELL_IDENTITY_KEYS.forEach(key => {
       if (value[key]) node.setAttribute(`data-${key}`, value[key]);
     });
@@ -2855,11 +2901,29 @@ class list_TableList extends ListItem {
         return;
       }
       this.domNode.setAttribute('data-list', listValue);
+      if (listValue === 'check') {
+        this._applyCheckUi();
+      } else {
+        this._removeCheckUi();
+      }
       if (typeof value === 'object') {
         CELL_IDENTITY_KEYS.concat(CELL_ATTRIBUTES).forEach(key => {
           if (value[key]) this.domNode.setAttribute(`data-${key}`, value[key]);
         });
         if (value['cell-bg']) this.domNode.setAttribute('data-cell-bg', value['cell-bg']);
+      }
+      // Re-wrap into a correctly-tagged container if bullet/check (UL) ↔ ordered (OL)
+      // crossed — otherwise the LI stays in a wrong-tag container.
+      const desiredTag = TableListContainer.getTag(listValue);
+      if (this.parent && this.parent.domNode && this.parent.domNode.tagName !== desiredTag) {
+        const row = list_TableList.identity(this.domNode).row;
+        const wrapValue = row ? {
+          row,
+          value: listValue
+        } : {
+          value: listValue
+        };
+        this.wrap(TableListContainer.blotName, wrapValue);
       }
       return;
     }
@@ -2885,15 +2949,23 @@ class list_TableList extends ListItem {
   }
   optimize(context) {
     const id = list_TableList.identity(this.domNode);
+    const listValue = list_TableList.formats(this.domNode);
     const {
       row,
       rowspan,
       colspan
     } = id;
-    if (row && !(this.parent instanceof TableListContainer)) {
-      this.wrap(TableListContainer.blotName, {
-        row
-      });
+
+    // Pre-empt ParentBlot.optimize's valueless wrap: pass the list value so
+    // TableListContainer.create picks the correct UL/OL tag.
+    if (!(this.parent instanceof TableListContainer)) {
+      const wrapValue = row ? {
+        row,
+        value: listValue
+      } : {
+        value: listValue
+      };
+      this.wrap(TableListContainer.blotName, wrapValue);
     }
     if (row && this.parent && this.parent.parent && !(this.parent.parent instanceof TableCell)) {
       this.parent.wrap(TableCell.blotName, {
@@ -2936,6 +3008,7 @@ class quill_better_table_BetterTable extends Module {
     external_commonjs_quill_commonjs2_quill_amd_quill_root_Quill_default.a.register(table_TableViewWrapper, true);
     external_commonjs_quill_commonjs2_quill_amd_quill_root_Quill_default.a.register(TableListContainer, true);
     external_commonjs_quill_commonjs2_quill_amd_quill_root_Quill_default.a.register(list_TableList, true);
+    external_commonjs_quill_commonjs2_quill_amd_quill_root_Quill_default.a.register(CheckedAttributor, true);
     // Extend TableCell.allowedChildren with TableListContainer here (not at list.js
     // module-eval time) so that HMR re-registrations refresh the reference too —
     // otherwise stale class refs in allowedChildren cause enforceAllowedChildren's
@@ -3336,7 +3409,7 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
     if(true) {
-      // 1776881242134
+      // 1776970719753
       var cssReload = __webpack_require__(12)(module.i, {"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -3631,6 +3704,15 @@ window.onload = () => {
   const quill = new Quill('#editor-wrapper', {
     theme: 'snow',
     modules: {
+      toolbar: [[{
+        header: [1, 2, 3, false]
+      }], ['bold', 'italic', 'underline', 'link'], [{
+        list: 'bullet'
+      }, {
+        list: 'ordered'
+      }, {
+        list: 'check'
+      }], ['clean']],
       table: false,
       'better-table': {
         operationMenu: {
