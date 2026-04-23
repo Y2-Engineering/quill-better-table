@@ -11,6 +11,12 @@ window.onload = () => {
   const quill = new Quill('#editor-wrapper', {
     theme: 'snow',
     modules: {
+      toolbar: [
+        [{ header: [1, 2, 3, false] }],
+        ['bold', 'italic', 'underline', 'link'],
+        [{ list: 'bullet' }, { list: 'ordered' }, { list: 'check' }],
+        ['clean']
+      ],
       table: false,
       'better-table': {
         operationMenu: {
