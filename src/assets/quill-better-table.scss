@@ -1,56 +1,6 @@
 $primaryColor: #0589f3;
 
 
-// Jira-style 'check' list: <li data-list="check" data-checked="true|false"> with a
-// <span class="ql-ui ql-check"> uiNode. Hides the native ::before bullet/number
-// and draws a square checkbox; a checkmark appears when data-checked="true".
-.ql-editor li[data-list="check"] {
-  list-style: none;
-
-  &::before {
-    content: none;
-    display: none;
-  }
-
-  > .ql-ui,
-  > .ql-check,
-  .ql-ui.ql-check {
-    display: inline-block !important;
-    box-sizing: border-box;
-    width: 1.1em;
-    height: 1.1em;
-    min-width: 1.1em;
-    min-height: 1.1em;
-    margin-right: 0.6em;
-    margin-top: 0.25em;
-    border: 1px solid currentColor;
-    border-radius: 0.25em;
-    cursor: pointer;
-    flex-shrink: 0;
-    position: relative;
-    user-select: none;
-    -webkit-user-select: none;
-    background: transparent;
-    vertical-align: top;
-  }
-
-  &[data-checked="true"] {
-    > .ql-ui::after,
-    > .ql-check::after,
-    .ql-ui.ql-check::after {
-      content: "";
-      position: absolute;
-      left: 0.2em;
-      top: 0.2em;
-      width: 0.45em;
-      height: 0.25em;
-      border-left: 1px solid currentColor;
-      border-bottom: 1px solid currentColor;
-      transform: rotate(-45deg);
-    }
-  }
-}
-
 .ql-container .qlbt-selection-line {
   &.qlbt-selection-line-left {
     &::before {
