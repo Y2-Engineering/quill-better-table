@@ -28,12 +28,6 @@ import {
   cellId
 } from './formats/table';
 
-import {
-  TableListContainer,
-  TableList,
-  CheckedAttributor
-} from './formats/list';
-
 class BetterTable extends Module {
   static register() {
     Quill.register(TableCol, true);
@@ -45,16 +39,6 @@ class BetterTable extends Module {
     Quill.register(TableContainer, true);
     Quill.register(TableViewWrapper, true);
     Quill.register(TableViewWrapper, true);
-    Quill.register(TableListContainer, true);
-    Quill.register(TableList, true);
-    Quill.register(CheckedAttributor, true);
-    // Extend TableCell.allowedChildren with TableListContainer here (not at list.js
-    // module-eval time) so that HMR re-registrations refresh the reference too —
-    // otherwise stale class refs in allowedChildren cause enforceAllowedChildren's
-    // instanceof check to fail and wrap the ol repeatedly. Dedupe by blotName.
-    TableCell.allowedChildren = TableCell.allowedChildren
-      .filter(c => c.blotName !== 'list-container')
-      .concat([TableListContainer])
     // register customized Header，overwriting quill built-in Header
     // Quill.register('formats/header', Header, true);
   }
@@ -150,9 +134,6 @@ class BetterTable extends Module {
         if (range.index === 0 || this.quill.getLength() <= 1) return true;
         const [line] = this.quill.getLine(range.index);
         if (context.offset === 0) {
-          // Let list-in-cell handler deal with <li> — it removes list format in place,
-          // never crosses cells.
-          if (line.statics.blotName === 'list') return true;
           const [prev] = this.quill.getLine(range.index - 1);
           if (prev != null) {
             if (prev.statics.blotName === 'table-cell-line' &&
@@ -251,24 +232,6 @@ BetterTable.keyboardBindings = {
         return false
       }
       return true
-    },
-  },
-
-  'list-in-cell backspace': {
-    key: 'Backspace',
-    format: ['list'],
-    collapsed: true,
-    offset: 0,
-    handler(range, context) {
-      const [line] = this.quill.getLine(range.index)
-      const inCell = line && line.parent && line.parent.parent
-        && line.parent.parent.statics
-        && line.parent.parent.statics.blotName === 'table'
-      if (!inCell) return true
-      // Remove list format in place; our TableList.format('list', false)
-      // replaces the <li> with a cell-line preserving cell identity.
-      this.quill.format('list', false, Quill.sources.USER)
-      return false
     },
   },
 

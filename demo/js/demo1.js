@@ -2,7 +2,6 @@ import QuillBetterTable from 'src/quill-better-table.js'
 // import better-table styles file
 import 'src/assets/quill-better-table.scss'
 
-QuillBetterTable.register()
 Quill.register({
   'modules/better-table': QuillBetterTable
 }, true)
@@ -11,12 +10,6 @@ window.onload = () => {
   const quill = new Quill('#editor-wrapper', {
     theme: 'snow',
     modules: {
-      toolbar: [
-        [{ header: [1, 2, 3, false] }],
-        ['bold', 'italic', 'underline', 'link'],
-        [{ list: 'bullet' }, { list: 'ordered' }, { list: 'check' }],
-        ['clean']
-      ],
       table: false,
       'better-table': {
         operationMenu: {

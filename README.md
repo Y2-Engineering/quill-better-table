@@ -77,14 +77,6 @@ ES6
 ```
 import QuillBetterTable from 'quill-better-table'
 
-// NOTE: you must call QuillBetterTable.register() *before* constructing the Quill
-// instance. In particular, list-in-cell support (bullet/ordered/checked/unchecked
-// inside a <td>) depends on our TableListContainer / TableList blots overriding
-// Quill's native list-container / list blots; without the explicit register()
-// call the native blots win and `quill.format('list', …)` inside a cell is
-// silently dropped.
-QuillBetterTable.register()
-
 Quill.register({
   'modules/better-table': QuillBetterTable
 }, true)
