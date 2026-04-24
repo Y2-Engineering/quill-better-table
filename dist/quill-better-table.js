@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "d67b89b40e2a934c14a1";
+/******/ 	var hotCurrentHash = "7ad6e7cca50b0a9b53c1";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -875,87 +875,6 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__0__;
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports) {
-
-// Module
-var code = "<?xml version=\"1.0\" standalone=\"no\"?><!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\"><svg class=\"icon\" width=\"20px\" height=\"20px\" viewBox=\"0 0 1024 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"#595959\" d=\"M73.142857 336.64h526.628572v43.885714H73.142857zM73.142857 643.657143h526.628572v43.885714H73.142857zM336.457143 117.028571h43.885714v789.942858h-43.885714zM204.8 73.142857h614.4a131.657143 131.657143 0 0 1 131.657143 131.657143v614.4a131.657143 131.657143 0 0 1-131.657143 131.657143H204.8A131.657143 131.657143 0 0 1 73.142857 819.2V204.8A131.84 131.84 0 0 1 204.8 73.142857z m0 43.885714a87.771429 87.771429 0 0 0-87.771429 87.771429v614.4a87.771429 87.771429 0 0 0 87.771429 87.771429h614.4a87.771429 87.771429 0 0 0 87.771429-87.771429V204.8a87.771429 87.771429 0 0 0-87.771429-87.771429zM819.2 73.142857h-219.428571v877.714286h219.428571a131.657143 131.657143 0 0 0 131.657143-131.657143V204.8A131.84 131.84 0 0 0 819.2 73.142857z m44.068571 460.982857h-65.828571v65.828572H753.371429v-65.828572h-65.828572V490.057143h65.828572v-65.828572h44.068571v65.828572h65.828571z\"/></svg>";
-// Exports
-module.exports = code;
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-// Module
-var code = "<?xml version=\"1.0\" standalone=\"no\"?><!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\"><svg class=\"icon\" width=\"20px\" height=\"20.00px\" viewBox=\"0 0 1024 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"#595959\" d=\"M380.342857 336.457143h526.811429v43.885714H380.342857z m0 307.2h526.811429v43.885714H380.342857zM643.657143 117.028571h43.885714v789.942858h-43.885714zM204.8 73.142857h614.582857A131.474286 131.474286 0 0 1 950.857143 204.8v614.4a131.657143 131.657143 0 0 1-131.657143 131.657143H204.8A131.657143 131.657143 0 0 1 73.142857 819.2V204.8A131.657143 131.657143 0 0 1 204.8 73.142857z m0 43.885714a87.588571 87.588571 0 0 0-87.588571 87.771429v614.4a87.588571 87.588571 0 0 0 87.588571 87.771429h614.582857a87.771429 87.771429 0 0 0 87.771429-87.771429V204.8a87.771429 87.771429 0 0 0-87.771429-87.771429zM204.8 73.142857A131.657143 131.657143 0 0 0 73.142857 204.8v614.4a131.657143 131.657143 0 0 0 131.657143 131.657143h219.428571V73.142857z m131.84 460.8h-65.828571v65.828572h-43.885715v-65.828572h-65.828571v-43.885714h65.828571v-65.828572h43.885715v65.828572h65.828571z\"/></svg>";
-// Exports
-module.exports = code;
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
-// Module
-var code = "<?xml version=\"1.0\" standalone=\"no\"?><!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\"><svg class=\"icon\" width=\"20px\" height=\"20.00px\" viewBox=\"0 0 1024 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"#595959\" d=\"M73.142857 599.771429h877.714286v43.885714H73.142857zM336.457143 380.342857h43.885714v526.628572h-43.885714z m307.2 0h43.885714v526.628572h-43.885714zM204.8 73.142857h614.4a131.657143 131.657143 0 0 1 131.657143 131.657143v614.4a131.657143 131.657143 0 0 1-131.657143 131.657143H204.8A131.657143 131.657143 0 0 1 73.142857 819.2V204.8A131.657143 131.657143 0 0 1 204.8 73.142857z m0 43.885714a87.771429 87.771429 0 0 0-87.771429 87.771429v614.4a87.588571 87.588571 0 0 0 87.771429 87.771429h614.4a87.588571 87.588571 0 0 0 87.771429-87.771429V204.8a87.771429 87.771429 0 0 0-87.771429-87.771429zM819.2 73.142857H204.8A131.657143 131.657143 0 0 0 73.142857 204.8v219.428571h877.714286v-219.428571A131.657143 131.657143 0 0 0 819.2 73.142857z m-219.428571 197.485714h-65.828572v65.828572h-43.885714v-65.828572h-65.828572v-43.885714h65.828572V160.914286h43.885714v65.828571h65.828572z\"/></svg>";
-// Exports
-module.exports = code;
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports) {
-
-// Module
-var code = "<?xml version=\"1.0\" standalone=\"no\"?><!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\"><svg class=\"icon\" width=\"20px\" height=\"20.00px\" viewBox=\"0 0 1024 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"#595959\" d=\"M204.8 73.142857h614.4a131.657143 131.657143 0 0 1 131.657143 131.657143v614.4a131.657143 131.657143 0 0 1-131.657143 131.657143H204.8A131.657143 131.657143 0 0 1 73.142857 819.2V204.8A131.84 131.84 0 0 1 204.8 73.142857z m0 43.885714a87.771429 87.771429 0 0 0-87.771429 87.771429v614.4a87.771429 87.771429 0 0 0 87.771429 87.771429h614.4a87.771429 87.771429 0 0 0 87.771429-87.771429V204.8a87.771429 87.771429 0 0 0-87.771429-87.771429zM73.142857 336.457143h877.714286v44.068571H73.142857zM336.64 117.028571h43.885714v526.628572h-43.885714z m307.017143 0h44.068571v526.628572H643.657143zM73.142857 599.771429v219.428571a131.657143 131.657143 0 0 0 131.657143 131.657143h614.4a131.657143 131.657143 0 0 0 131.657143-131.657143v-219.428571z m526.628572 197.485714h-65.645715v65.828571H490.057143v-65.828571h-65.828572v-43.885714h65.828572v-65.828572h44.068571v65.828572h65.645715z\"/></svg>";
-// Exports
-module.exports = code;
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports) {
-
-// Module
-var code = "<?xml version=\"1.0\" standalone=\"no\"?><!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\"><svg class=\"icon\" width=\"20px\" height=\"20.00px\" viewBox=\"0 0 1024 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"#595959\" d=\"M925.99596 99.038384c-25.470707-25.6-60.121212-39.822222-96.323233-39.822222H194.19798c-36.072727 0-70.723232 14.351515-96.323233 39.822222-25.6 25.6-39.822222 60.121212-39.822222 96.323232v635.474748c0 36.072727 14.351515 70.723232 39.822222 96.323232C123.474747 952.759596 158.125253 967.111111 194.19798 967.111111h635.474747c36.072727 0 70.723232-14.351515 96.323233-39.951515 25.6-25.6 39.951515-60.121212 39.951515-96.323232V195.361616c0-36.072727-14.351515-70.723232-39.951515-96.323232z m-277.850505 5.559596v226.909091H375.725253V104.59798h272.420202zM103.434343 195.361616c0-24.048485 9.567677-47.191919 26.634344-64.129293 17.066667-17.066667 40.080808-26.634343 64.129293-26.634343h136.145454v226.909091H103.434343V195.361616z m90.763637 726.367677c-24.048485 0-47.191919-9.567677-64.129293-26.634344-17.066667-17.066667-26.634343-40.080808-26.634344-64.129292V649.309091h226.909091v272.420202H194.19798z m181.527273 0V649.309091h272.290909v272.420202H375.725253z m544.711111-90.892929c0 24.048485-9.567677 47.191919-26.634344 64.129293-17.066667 17.066667-40.080808 26.634343-64.129293 26.634343H693.527273V649.309091h226.909091v181.527273zM693.527273 331.507071V104.59798h136.145454c24.048485 0 47.191919 9.567677 64.129293 26.634343 17.066667 17.066667 26.634343 40.080808 26.634344 64.129293v136.145455H693.527273z\"/></svg>";
-// Exports
-module.exports = code;
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports) {
-
-// Module
-var code = "<?xml version=\"1.0\" standalone=\"no\"?><!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\"><svg class=\"icon\" width=\"20px\" height=\"20.00px\" viewBox=\"0 0 1024 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"#595959\" d=\"M336.457143 73.142857h43.885714v877.714286h-43.885714z m307.382857 0h43.702857v877.714286h-43.702857z m-438.857143 0h614.4A131.657143 131.657143 0 0 1 950.857143 204.8v614.4a131.474286 131.474286 0 0 1-131.474286 131.657143h-614.4A131.657143 131.657143 0 0 1 73.142857 819.2V204.8A131.84 131.84 0 0 1 204.982857 73.142857z m0 43.885714a87.588571 87.588571 0 0 0-87.771428 87.771429v614.4a87.588571 87.588571 0 0 0 87.771428 87.771429h614.4a87.771429 87.771429 0 0 0 87.771429-87.771429V204.8a87.771429 87.771429 0 0 0-87.771429-87.771429zM73.142857 336.457143h877.714286v307.2H73.142857z m292.571429 43.885714v219.428572h292.571428v-219.428572z\"/></svg>";
-// Exports
-module.exports = code;
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports) {
-
-// Module
-var code = "<?xml version=\"1.0\" standalone=\"no\"?><!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\"><svg class=\"icon\" width=\"20px\" height=\"20.00px\" viewBox=\"0 0 1024 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"#595959\" d=\"M925.996 99.038c-25.47-25.6-60.121-39.822-96.323-39.822H194.198c-75.12 0.13-136.016 61.026-136.145 136.146v635.345c0 36.073 14.351 70.723 39.822 96.323 25.6 25.73 60.25 40.081 96.323 40.081h635.475c36.072 0 70.723-14.351 96.323-39.951 25.6-25.6 39.951-60.122 39.951-96.324V195.362c0-36.073-14.351-70.724-39.951-96.324z m-365.77 494.287L512 545.228l-48.226 48.097-32.194-31.935 48.355-48.226-48.226-48.097 32.194-32.194L512 480.97l48.097-48.097 32.194 32.194-48.097 48.097 48.226 48.226-32.194 31.935zM103.434 195.362c0-24.049 9.568-47.192 26.635-64.13 17.066-17.066 40.08-26.634 64.129-26.634h136.145v226.91H103.434V195.361z m0 181.656h226.91V649.31h-226.91V377.02z m90.764 544.84c-24.049 0-47.192-9.567-64.13-26.634-17.066-17.066-26.634-40.08-26.634-64.258V694.69h226.91v227.168H194.197z m726.238-90.763c0 24.048-9.438 47.192-26.505 64.259-17.066 17.066-40.21 26.634-64.258 26.505H693.527V694.69h226.91v136.404z m0-181.786H693.527V377.02h226.91v272.29zM693.527 331.507V104.598h136.146c24.048 0 47.192 9.438 64.258 26.505 17.067 17.067 26.635 40.21 26.505 64.259v136.145H693.527z\"/></svg>";
-// Exports
-module.exports = code;
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports) {
-
-// Module
-var code = "<?xml version=\"1.0\" standalone=\"no\"?><!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\"><svg class=\"icon\" width=\"20px\" height=\"20.00px\" viewBox=\"0 0 1024 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"#595959\" d=\"M925.99596 99.038384c-25.470707-25.6-60.121212-39.822222-96.323233-39.822222H194.19798c-36.072727 0-70.723232 14.351515-96.323233 39.822222-25.6 25.6-39.822222 60.121212-39.822222 96.323232v635.474748c0 36.072727 14.351515 70.723232 39.822222 96.323232C123.474747 952.759596 158.125253 967.111111 194.19798 967.111111h635.474747c36.072727 0 70.723232-14.351515 96.323233-39.951515 25.6-25.6 39.951515-60.121212 39.951515-96.323232V195.361616c0-36.072727-14.351515-70.723232-39.951515-96.323232z m-550.270707 5.559596h272.290909v227.167677H375.725253V104.59798z m56.242424 360.468687l31.935353-32.19394 48.09697 48.226263 48.09697-48.226263 32.193939 32.19394-48.09697 48.096969 48.226263 48.226263-32.193939 31.935354-48.226263-48.09697-48.226263 48.09697-31.935353-31.935354 48.226262-48.226263-48.096969-48.096969zM103.434343 195.361616c0-24.048485 9.567677-47.191919 26.634344-64.129293 17.066667-17.066667 40.080808-26.634343 64.129293-26.634343h136.145454v227.167677H103.434343V195.361616z m817.002021 635.733333c0 24.048485-9.567677 47.191919-26.634344 64.258586-17.066667 17.066667-40.080808 26.634343-64.129293 26.634344H194.19798c-24.048485 0-47.191919-9.567677-64.258586-26.634344C112.872727 878.157576 103.434343 855.014141 103.434343 830.836364V694.690909h226.909091v226.909091h45.381819V694.690909h272.290909v226.909091h45.381818V694.690909h226.909091v136.40404z m0-499.329292H693.527273V104.59798h136.145454c24.048485 0 47.191919 9.567677 64.129293 26.634343 17.066667 17.066667 26.634343 40.080808 26.634344 64.129293v136.404041z\"/></svg>";
-// Exports
-module.exports = code;
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports) {
-
-// Module
-var code = "<?xml version=\"1.0\" standalone=\"no\"?><!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\"><svg class=\"icon\" width=\"20px\" height=\"20.00px\" viewBox=\"0 0 1024 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"#595959\" d=\"M764.42168889 830.5152c0 30.23530667-24.61013333 54.84430222-54.84316444 54.84430222H314.42147555c-30.23416889 0-54.84316445-24.61013333-54.84316444-54.84430222V248.32796445h504.84337778v582.18723555zM369.26577778 149.89084445c0-6.32832 4.92202667-11.25034667 11.25034667-11.25034667H644.18702222c6.32832 0 11.25034667 4.92202667 11.25034667 11.25034667v33.04675555H369.26577778V149.89084445z m559.68768 33.04675555H720.82773333V149.89084445c0-42.1888-34.45191111-76.64071111-76.64071111-76.64071112H380.51612445c-42.1888 0-76.64071111 34.45191111-76.64071112 76.64071112v33.04675555h-208.82773333c-18.28181333 0-33.04789333 14.76608-33.04789333 33.04675555s14.76608 33.04675555 33.04675555 33.04675556h98.43825778v581.48408889c0 66.79779555 54.14001778 120.93781333 120.93667555 120.93781333h395.1570489c66.79665778 0 120.93667555-54.14001778 120.93667555-120.93781333V248.32796445h98.43825778c18.28067555 0 33.04675555-14.76494222 33.04675555-33.04675556s-14.76608-32.34360889-33.04675555-32.34360889zM512 786.21923555c18.28181333 0 33.04675555-14.76608 33.04675555-33.04789333v-351.56195555c0-18.28181333-14.76494222-33.04675555-33.04675555-33.04675556s-33.04675555 14.76494222-33.04675555 33.04675556v351.56195555c0 18.28181333 14.76494222 33.04789333 33.04675555 33.04789333m-153.98456889 0c18.28181333 0 33.04675555-14.76608 33.04675556-33.04789333v-351.56195555c0-18.28181333-14.76494222-33.04675555-33.04675556-33.04675556s-33.04675555 14.76494222-33.04675556 33.04675556v351.56195555c0.70314667 18.28181333 15.46922667 33.04789333 33.04675556 33.04789333m307.96913778 0c18.28067555 0 33.04675555-14.76608 33.04675556-33.04789333v-351.56195555c0-18.28181333-14.76608-33.04675555-33.04675556-33.04675556s-33.04675555 14.76494222-33.04675556 33.04675556v351.56195555c0 18.28181333 14.76494222 33.04789333 33.04675556 33.04789333\"/></svg>";
-// Exports
-module.exports = code;
-
-/***/ }),
-/* 10 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1349,7 +1268,7 @@ const CELL_DEFAULT = {
   colspan: 1
 };
 const ERROR_LIMIT = 5;
-const TAGS_TO_IGNORE_FORMAT = ['header', 'list', 'code'];
+const TAGS_TO_IGNORE_FORMAT = ['header', 'code'];
 class TableCellLine extends table_Block {
   static create(value) {
     const node = super.create(value);
@@ -1387,8 +1306,28 @@ class TableCellLine extends table_Block {
       } else {
         this.domNode.removeAttribute('data-cell-bg');
       }
+    } else if (name === 'list') {
+      if (!value) {
+        super.format(name, value);
+        return;
+      }
+      const fmt = TableCellLine.formats(this.domNode);
+      const {
+        row,
+        cell,
+        rowspan,
+        colspan
+      } = fmt;
+      super.format(name, {
+        value,
+        row,
+        cell,
+        rowspan,
+        colspan,
+        'cell-bg': fmt['cell-bg']
+      });
     } else if (TAGS_TO_IGNORE_FORMAT.includes(name)) {
-      // Cancel formatting to avoid table breaking
+      // Cancel formatting to avoid table breaking (header, code still blocked)
       // super.format(name, value)
     } else if (name === 'table-cell-line') {
       if (!value) return;
@@ -1421,14 +1360,33 @@ class TableCellLine extends table_Block {
 TableCellLine.blotName = "table-cell-line";
 TableCellLine.className = "qlbt-cell-line";
 TableCellLine.tagName = "P";
+
+// Returns the `cell` identity of a child blot on the specified side ('head' | 'tail').
+// For list-container children, looks into the boundary <li> on the matching side
+// and reads identity via TableList.identity() — since <li>.formats() now returns
+// the native scalar list type, not the identity-carrying object.
+function getBoundaryCellId(child, side) {
+  if (!child || !child.statics) return undefined;
+  if (child.statics.blotName === 'list-container') {
+    const li = child.children && child.children[side];
+    if (!li || !li.statics) return undefined;
+    // TableList exposes static identity(domNode) — fall back gracefully if absent.
+    const identityFn = li.statics.identity;
+    const id = typeof identityFn === 'function' ? identityFn(li.domNode) : {};
+    return id.cell;
+  }
+  const fmt = child.formats()[child.statics.blotName];
+  return fmt && fmt.cell;
+}
 class TableCell extends Container {
   checkMerge() {
     if (super.checkMerge() && this.next.children.head != null) {
-      const thisHead = this.children.head.formats()[this.children.head.statics.blotName];
-      const thisTail = this.children.tail.formats()[this.children.tail.statics.blotName];
-      const nextHead = this.next.children.head.formats()[this.next.children.head.statics.blotName];
-      const nextTail = this.next.children.tail.formats()[this.next.children.tail.statics.blotName];
-      return thisHead.cell === thisTail.cell && thisHead.cell === nextHead.cell && thisHead.cell === nextTail.cell;
+      const thisHead = getBoundaryCellId(this.children.head, 'head');
+      const thisTail = getBoundaryCellId(this.children.tail, 'tail');
+      const nextHead = getBoundaryCellId(this.next.children.head, 'head');
+      const nextTail = getBoundaryCellId(this.next.children.tail, 'tail');
+      if (!thisHead || !thisTail || !nextHead || !nextTail) return false;
+      return thisHead === thisTail && thisHead === nextHead && thisHead === nextTail;
     }
     return false;
   }
@@ -1654,9 +1612,7 @@ class table_TableContainer extends Container {
   colGroup() {
     return this.children.head;
   }
-  deleteColumns(compareRect) {
-    let delIndexes = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
-    let editorWrapper = arguments.length > 2 ? arguments[2] : undefined;
+  deleteColumns(compareRect, delIndexes = [], editorWrapper) {
     const [body] = this.descendants(TableBody);
     if (body == null || body.children.head == null) return;
     const tableCells = this.descendants(TableCell);
@@ -1779,9 +1735,7 @@ class table_TableContainer extends Container {
       tableRow.appendChild(tableCell);
     }
   }
-  insertColumn(compareRect, colIndex) {
-    let isRight = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
-    let editorWrapper = arguments.length > 3 ? arguments[3] : undefined;
+  insertColumn(compareRect, colIndex, isRight = true, editorWrapper) {
     const [body] = this.descendants(TableBody);
     const [tableColGroup] = this.descendants(TableColGroup);
     const tableCols = this.descendants(TableCol);
@@ -2237,39 +2191,39 @@ function computeBoundaryFromRects(startRect, endRect) {
   };
 }
 // EXTERNAL MODULE: ./src/assets/icons/icon_operation_1.svg
-var icon_operation_1 = __webpack_require__(1);
+var icon_operation_1 = __webpack_require__(2);
 var icon_operation_1_default = /*#__PURE__*/__webpack_require__.n(icon_operation_1);
 
 // EXTERNAL MODULE: ./src/assets/icons/icon_operation_2.svg
-var icon_operation_2 = __webpack_require__(2);
+var icon_operation_2 = __webpack_require__(3);
 var icon_operation_2_default = /*#__PURE__*/__webpack_require__.n(icon_operation_2);
 
 // EXTERNAL MODULE: ./src/assets/icons/icon_operation_3.svg
-var icon_operation_3 = __webpack_require__(3);
+var icon_operation_3 = __webpack_require__(4);
 var icon_operation_3_default = /*#__PURE__*/__webpack_require__.n(icon_operation_3);
 
 // EXTERNAL MODULE: ./src/assets/icons/icon_operation_4.svg
-var icon_operation_4 = __webpack_require__(4);
+var icon_operation_4 = __webpack_require__(5);
 var icon_operation_4_default = /*#__PURE__*/__webpack_require__.n(icon_operation_4);
 
 // EXTERNAL MODULE: ./src/assets/icons/icon_operation_5.svg
-var icon_operation_5 = __webpack_require__(5);
+var icon_operation_5 = __webpack_require__(6);
 var icon_operation_5_default = /*#__PURE__*/__webpack_require__.n(icon_operation_5);
 
 // EXTERNAL MODULE: ./src/assets/icons/icon_operation_6.svg
-var icon_operation_6 = __webpack_require__(6);
+var icon_operation_6 = __webpack_require__(7);
 var icon_operation_6_default = /*#__PURE__*/__webpack_require__.n(icon_operation_6);
 
 // EXTERNAL MODULE: ./src/assets/icons/icon_operation_7.svg
-var icon_operation_7 = __webpack_require__(7);
+var icon_operation_7 = __webpack_require__(8);
 var icon_operation_7_default = /*#__PURE__*/__webpack_require__.n(icon_operation_7);
 
 // EXTERNAL MODULE: ./src/assets/icons/icon_operation_8.svg
-var icon_operation_8 = __webpack_require__(8);
+var icon_operation_8 = __webpack_require__(9);
 var icon_operation_8_default = /*#__PURE__*/__webpack_require__.n(icon_operation_8);
 
 // EXTERNAL MODULE: ./src/assets/icons/icon_operation_9.svg
-var icon_operation_9 = __webpack_require__(9);
+var icon_operation_9 = __webpack_require__(10);
 var icon_operation_9_default = /*#__PURE__*/__webpack_require__.n(icon_operation_9);
 
 // CONCATENATED MODULE: ./src/modules/table-operation-menu.js
@@ -2446,12 +2400,11 @@ class table_operation_menu_TableOperationMenu {
     document.removeEventListener("click", this.destroyHandler, false);
     return null;
   }
-  menuInitial(_ref) {
-    let {
-      table,
-      left,
-      top
-    } = _ref;
+  menuInitial({
+    table,
+    left,
+    top
+  }) {
     this.domNode = document.createElement('div');
     this.domNode.classList.add('qlbt-operation-menu');
     css(this.domNode, {
@@ -2517,12 +2470,11 @@ class table_operation_menu_TableOperationMenu {
     }
     return node;
   }
-  menuItemCreator(_ref2) {
-    let {
-      text,
-      iconSrc,
-      handler
-    } = _ref2;
+  menuItemCreator({
+    text,
+    iconSrc,
+    handler
+  }) {
     const node = document.createElement('div');
     node.classList.add('qlbt-operation-menu-item');
     const iconSpan = document.createElement('span');
@@ -2612,24 +2564,39 @@ function matchTableCell(node, delta, scroll) {
   }, new Delta());
   return delta.reduce((newDelta, op) => {
     if (op.insert && typeof op.insert === 'string' && op.insert.startsWith('\n')) {
-      newDelta.insert(op.insert, Object.assign({}, Object.assign({}, {
-        row: rowId
-      }, op.attributes.table), {
-        'table-cell-line': {
-          row: rowId,
-          cell: cellId,
-          rowspan,
-          colspan,
-          'cell-bg': cellBg
-        }
-      }, _omit(op.attributes, ['table'])));
+      const attrs = op.attributes || {};
+      const baseIdentity = {
+        row: rowId,
+        cell: cellId,
+        rowspan,
+        colspan,
+        'cell-bg': cellBg
+      };
+      if (attrs.list) {
+        // <li> from source — keep list, carry cell identity on the li attribute object,
+        // do NOT wrap as table-cell-line.
+        const listValue = typeof attrs.list === 'string' ? attrs.list : attrs.list && attrs.list.value;
+        newDelta.insert(op.insert, Object.assign({}, {
+          row: rowId
+        }, {
+          list: Object.assign({
+            value: listValue
+          }, baseIdentity)
+        }, _omit(attrs, ['table', 'table-cell-line', 'list', 'list-container', 'indent'])));
+      } else {
+        newDelta.insert(op.insert, Object.assign({}, Object.assign({}, {
+          row: rowId
+        }, attrs.table), {
+          'table-cell-line': baseIdentity
+        }, _omit(attrs, ['table', 'list-container', 'indent'])));
+      }
     } else {
       // bugfix: remove background attr from the delta of table cell
       //         to prevent unexcepted background attr append.
       if (op.attributes && op.attributes.background && op.attributes.background === convertToHex(cellBg)) {
-        newDelta.insert(op.insert, Object.assign({}, _omit(op.attributes, ['table', 'table-cell-line', 'background'])));
+        newDelta.insert(op.insert, Object.assign({}, _omit(op.attributes, ['table', 'table-cell-line', 'list-container', 'background', 'indent'])));
       } else {
-        newDelta.insert(op.insert, Object.assign({}, _omit(op.attributes, ['table', 'table-cell-line'])));
+        newDelta.insert(op.insert, Object.assign({}, _omit(op.attributes, ['table', 'table-cell-line', 'list-container', 'indent'])));
       }
     }
     return newDelta;
@@ -2683,14 +2650,18 @@ function matchTableHeader(node, delta, scroll) {
         lines.push('\n');
       }
       lines.forEach(text => {
-        text === '\n' ? newDelta.insert('\n', {
+        text === '\n'
+        // Include table-cell-line marker to keep adjacent inserts from compositing —
+        // the second reduce below will route list ops to a list branch and rewrite
+        // table-cell-line for the rest.
+        ? newDelta.insert('\n', Object.assign({}, op.attributes || {}, {
           'table-cell-line': {
             row: rowId,
             cell: cellId,
             rowspan,
             colspan
           }
-        }) : newDelta.insert(text, op.attributes);
+        })) : newDelta.insert(text, _omit(op.attributes, ['indent']));
       });
     } else {
       newDelta.insert(op.insert, op.attributes);
@@ -2699,16 +2670,31 @@ function matchTableHeader(node, delta, scroll) {
   }, new Delta());
   return delta.reduce((newDelta, op) => {
     if (op.insert && typeof op.insert === 'string' && op.insert.startsWith('\n')) {
-      newDelta.insert(op.insert, Object.assign({}, {
-        'table-cell-line': {
-          row: rowId,
-          cell: cellId,
-          rowspan,
-          colspan
-        }
-      }));
+      const attrs = op.attributes || {};
+      const baseIdentity = {
+        row: rowId,
+        cell: cellId,
+        rowspan,
+        colspan
+      };
+      if (attrs.list) {
+        const listValue = typeof attrs.list === 'string' ? attrs.list : attrs.list && attrs.list.value;
+        newDelta.insert(op.insert, Object.assign({}, {
+          row: rowId
+        }, {
+          list: Object.assign({
+            value: listValue
+          }, baseIdentity)
+        }, _omit(attrs, ['table', 'table-cell-line', 'list', 'list-container', 'indent'])));
+      } else {
+        newDelta.insert(op.insert, Object.assign({}, {
+          row: rowId
+        }, {
+          'table-cell-line': baseIdentity
+        }));
+      }
     } else {
-      newDelta.insert(op.insert, Object.assign({}, _omit(op.attributes, ['table', 'table-cell-line'])));
+      newDelta.insert(op.insert, Object.assign({}, _omit(op.attributes, ['table', 'table-cell-line', 'list-container', 'indent'])));
     }
     return newDelta;
   }, new Delta());
@@ -2754,6 +2740,248 @@ function matchTable(node, delta, scroll) {
     }, new Delta());
   }
 }
+// CONCATENATED MODULE: ./src/formats/list.js
+
+
+const ListContainer = external_commonjs_quill_commonjs2_quill_amd_quill_root_Quill_default.a.import('formats/list-container');
+const ListItem = external_commonjs_quill_commonjs2_quill_amd_quill_root_Quill_default.a.import('formats/list');
+const Parchment = external_commonjs_quill_commonjs2_quill_amd_quill_root_Quill_default.a.import('parchment');
+
+// Jira-style single-tri-state checklist: one list type 'check' with an
+// orthogonal data-checked attribute. Parallel to native Quill's 'checked' /
+// 'unchecked' pair (two list types, no attribute).
+const CheckedAttributor = new Parchment.Attributor('checked', 'data-checked', {
+  scope: Parchment.Scope.BLOCK
+});
+class TableListContainer extends ListContainer {
+  static getTag(value) {
+    const listValue = typeof value === 'string' ? value : value && value.value;
+    if (listValue === 'bullet' || listValue === 'check') return 'UL';
+    return 'OL';
+  }
+  static create(value) {
+    const node = document.createElement(this.getTag(value));
+    if (value && typeof value === 'object' && value.row) {
+      node.setAttribute('data-row', value.row);
+    }
+    return node;
+  }
+  static formats(domNode) {
+    const formats = {};
+    if (domNode.hasAttribute('data-row')) {
+      formats.row = domNode.getAttribute('data-row');
+    }
+    return formats;
+  }
+  formats() {
+    const formats = {};
+    if (this.domNode.hasAttribute('data-row')) {
+      formats.row = this.domNode.getAttribute('data-row');
+    }
+    return formats;
+  }
+  checkMerge() {
+    if (!super.checkMerge()) return false;
+    if (this.next == null || this.next.children.head == null) return false;
+    // Same tag only — bullet/check (UL) must not merge with ordered (OL).
+    if (this.domNode.tagName !== this.next.domNode.tagName) return false;
+    const thisRow = this.domNode.getAttribute('data-row');
+    const nextRow = this.next.domNode.getAttribute('data-row');
+    // Non-cell lists: plain same-tag merge (matches native ListContainer behavior).
+    if (!thisRow && !nextRow) return true;
+    // One side has cell identity, other does not → boundary, don't merge.
+    if (!thisRow || !nextRow) return false;
+    if (thisRow !== nextRow) return false;
+    const thisTailLi = this.children.tail;
+    const nextHeadLi = this.next.children.head;
+    if (!thisTailLi || !nextHeadLi) return false;
+    const thisId = list_TableList.identity(thisTailLi.domNode);
+    const nextId = list_TableList.identity(nextHeadLi.domNode);
+    if (!thisId.cell || !nextId.cell) return false;
+    return thisId.cell === nextId.cell;
+  }
+}
+TableListContainer.blotName = 'list-container';
+TableListContainer.tagName = ['OL', 'UL'];
+TableListContainer.defaultTag = 'OL';
+class list_TableList extends ListItem {
+  static register() {
+    // Override the inherited ListItem.register() which would re-register the native
+    // ListContainer and clobber our TableListContainer.
+    external_commonjs_quill_commonjs2_quill_amd_quill_root_Quill_default.a.register(TableListContainer, true);
+    external_commonjs_quill_commonjs2_quill_amd_quill_root_Quill_default.a.register(CheckedAttributor, true);
+  }
+  constructor(scroll, domNode) {
+    super(scroll, domNode);
+    // ListItem constructor attaches a uiNode <span class="ql-ui"> for
+    // native checkbox (checked/unchecked) toggling. Tag it for the Jira-style
+    // single 'check' type so our CSS can render the checkbox.
+    if (domNode.getAttribute('data-list') === 'check') {
+      this._applyCheckUi();
+    }
+  }
+  _applyCheckUi() {
+    if (this.uiNode) {
+      this.uiNode.classList.add('ql-check');
+      this.uiNode.setAttribute('contenteditable', 'false');
+    }
+    if (!this.domNode.hasAttribute('data-checked')) {
+      this.domNode.setAttribute('data-checked', 'false');
+    }
+  }
+  _removeCheckUi() {
+    if (this.uiNode) this.uiNode.classList.remove('ql-check');
+    this.domNode.removeAttribute('data-checked');
+  }
+  static create(value) {
+    if (typeof value === 'string') {
+      value = {
+        value
+      };
+    }
+    const node = super.create(value.value);
+    if (value.value === 'check' && !node.hasAttribute('data-checked')) {
+      node.setAttribute('data-checked', 'false');
+    }
+    CELL_IDENTITY_KEYS.forEach(key => {
+      if (value[key]) node.setAttribute(`data-${key}`, value[key]);
+    });
+    CELL_ATTRIBUTES.forEach(key => {
+      if (value[key]) node.setAttribute(`data-${key}`, value[key]);
+    });
+    if (value['cell-bg']) {
+      node.setAttribute('data-cell-bg', value['cell-bg']);
+    }
+    return node;
+  }
+
+  // Scalar list type — matches native ListItem.formats shape so Quill's delta/clipboard
+  // round-trips work. Fall back to <ul>/<ol> parent tag when data-list is missing
+  // (true for freshly pasted HTML).
+  static formats(domNode) {
+    if (domNode.hasAttribute('data-list')) {
+      return domNode.getAttribute('data-list') || undefined;
+    }
+    const parent = domNode.parentNode;
+    if (parent && parent.tagName === 'UL') return 'bullet';
+    if (parent && parent.tagName === 'OL') return 'ordered';
+    return undefined;
+  }
+
+  // Cell-identity on the LI, read directly from DOM. Used by checkMerge, format,
+  // optimize, and our own re-wrap logic — separate from the scalar .formats shape.
+  static identity(domNode) {
+    const out = {};
+    CELL_IDENTITY_KEYS.concat(CELL_ATTRIBUTES).concat(['cell-bg']).forEach(attr => {
+      if (domNode.hasAttribute(`data-${attr}`)) {
+        out[attr] = domNode.getAttribute(`data-${attr}`) || undefined;
+      }
+    });
+    return out;
+  }
+
+  // Return the native ListItem shape (scalar list type) so Quill's delta diffing
+  // and bubbleFormats round-trip cleanly. Cell identity is read separately via
+  // TableList.identity(domNode) in places that need it (checkMerge, optimize, format).
+  formats() {
+    const formats = {};
+    const listValue = list_TableList.formats(this.domNode);
+    if (listValue !== undefined) formats[list_TableList.blotName] = listValue;
+    return formats;
+  }
+  format(name, value) {
+    if (name !== list_TableList.blotName) {
+      super.format(name, value);
+      return;
+    }
+    if (value) {
+      const listValue = typeof value === 'string' ? value : value.value;
+      if (!listValue) {
+        super.format(name, value);
+        return;
+      }
+      this.domNode.setAttribute('data-list', listValue);
+      if (listValue === 'check') {
+        this._applyCheckUi();
+      } else {
+        this._removeCheckUi();
+      }
+      if (typeof value === 'object') {
+        CELL_IDENTITY_KEYS.concat(CELL_ATTRIBUTES).forEach(key => {
+          if (value[key]) this.domNode.setAttribute(`data-${key}`, value[key]);
+        });
+        if (value['cell-bg']) this.domNode.setAttribute('data-cell-bg', value['cell-bg']);
+      }
+      // Re-wrap into a correctly-tagged container if bullet/check (UL) ↔ ordered (OL)
+      // crossed — otherwise the LI stays in a wrong-tag container.
+      const desiredTag = TableListContainer.getTag(listValue);
+      if (this.parent && this.parent.domNode && this.parent.domNode.tagName !== desiredTag) {
+        const row = list_TableList.identity(this.domNode).row;
+        const wrapValue = row ? {
+          row,
+          value: listValue
+        } : {
+          value: listValue
+        };
+        this.wrap(TableListContainer.blotName, wrapValue);
+      }
+      return;
+    }
+    const id = list_TableList.identity(this.domNode);
+    const {
+      row,
+      cell,
+      rowspan,
+      colspan
+    } = id;
+    const cellBg = id['cell-bg'];
+    if (row) {
+      this.replaceWith(TableCellLine.blotName, {
+        row,
+        cell,
+        rowspan,
+        colspan,
+        'cell-bg': cellBg
+      });
+    } else {
+      super.format(name, value);
+    }
+  }
+  optimize(context) {
+    const id = list_TableList.identity(this.domNode);
+    const listValue = list_TableList.formats(this.domNode);
+    const {
+      row,
+      rowspan,
+      colspan
+    } = id;
+
+    // Pre-empt ParentBlot.optimize's valueless wrap: pass the list value so
+    // TableListContainer.create picks the correct UL/OL tag.
+    if (!(this.parent instanceof TableListContainer)) {
+      const wrapValue = row ? {
+        row,
+        value: listValue
+      } : {
+        value: listValue
+      };
+      this.wrap(TableListContainer.blotName, wrapValue);
+    }
+    if (row && this.parent && this.parent.parent && !(this.parent.parent instanceof TableCell)) {
+      this.parent.wrap(TableCell.blotName, {
+        row,
+        rowspan,
+        colspan
+      });
+    }
+    super.optimize(context);
+  }
+}
+list_TableList.blotName = 'list';
+list_TableList.tagName = 'LI';
+TableListContainer.allowedChildren = [list_TableList];
+list_TableList.requiredContainer = TableListContainer;
+
 // CONCATENATED MODULE: ./src/quill-better-table.js
 
 
@@ -2766,6 +2994,7 @@ function matchTable(node, delta, scroll) {
 const Module = external_commonjs_quill_commonjs2_quill_amd_quill_root_Quill_default.a.import('core/module');
 const quill_better_table_Delta = external_commonjs_quill_commonjs2_quill_amd_quill_root_Quill_default.a.import('delta');
 
+
 class quill_better_table_BetterTable extends Module {
   static register() {
     external_commonjs_quill_commonjs2_quill_amd_quill_root_Quill_default.a.register(TableCol, true);
@@ -2777,10 +3006,17 @@ class quill_better_table_BetterTable extends Module {
     external_commonjs_quill_commonjs2_quill_amd_quill_root_Quill_default.a.register(table_TableContainer, true);
     external_commonjs_quill_commonjs2_quill_amd_quill_root_Quill_default.a.register(table_TableViewWrapper, true);
     external_commonjs_quill_commonjs2_quill_amd_quill_root_Quill_default.a.register(table_TableViewWrapper, true);
+    external_commonjs_quill_commonjs2_quill_amd_quill_root_Quill_default.a.register(TableListContainer, true);
+    external_commonjs_quill_commonjs2_quill_amd_quill_root_Quill_default.a.register(list_TableList, true);
+    external_commonjs_quill_commonjs2_quill_amd_quill_root_Quill_default.a.register(CheckedAttributor, true);
+    // Extend TableCell.allowedChildren with TableListContainer here (not at list.js
+    // module-eval time) so that HMR re-registrations refresh the reference too —
+    // otherwise stale class refs in allowedChildren cause enforceAllowedChildren's
+    // instanceof check to fail and wrap the ol repeatedly. Dedupe by blotName.
+    TableCell.allowedChildren = TableCell.allowedChildren.filter(c => c.blotName !== 'list-container').concat([TableListContainer]);
     // register customized Header，overwriting quill built-in Header
     // Quill.register('formats/header', Header, true);
   }
-
   constructor(quill, options) {
     super(quill, options);
 
@@ -2846,6 +3082,9 @@ class quill_better_table_BetterTable extends Module {
       if (range.index === 0 || this.quill.getLength() <= 1) return true;
       const [line] = this.quill.getLine(range.index);
       if (context.offset === 0) {
+        // Let list-in-cell handler deal with <li> — it removes list format in place,
+        // never crosses cells.
+        if (line.statics.blotName === 'list') return true;
         const [prev] = this.quill.getLine(range.index - 1);
         if (prev != null) {
           if (prev.statics.blotName === 'table-cell-line' && line.statics.blotName !== 'table-cell-line') return false;
@@ -2871,8 +3110,7 @@ class quill_better_table_BetterTable extends Module {
       return matcher[0] !== 'tr';
     });
   }
-  getTable() {
-    let range = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.quill.getSelection();
+  getTable(range = this.quill.getSelection()) {
     if (range == null) return [null, null, null, -1];
     const [cellLine, offset] = this.quill.getLine(range.index);
     if (cellLine == null || cellLine.statics.blotName !== TableCellLine.blotName) {
@@ -2945,6 +3183,21 @@ quill_better_table_BetterTable.keyboardBindings = {
       return true;
     }
   },
+  'list-in-cell backspace': {
+    key: 'Backspace',
+    format: ['list'],
+    collapsed: true,
+    offset: 0,
+    handler(range, context) {
+      const [line] = this.quill.getLine(range.index);
+      const inCell = line && line.parent && line.parent.parent && line.parent.parent.statics && line.parent.parent.statics.blotName === 'table';
+      if (!inCell) return true;
+      // Remove list format in place; our TableList.format('list', false)
+      // replaces the <li> with a cell-line preserving cell identity.
+      this.quill.format('list', false, external_commonjs_quill_commonjs2_quill_amd_quill_root_Quill_default.a.sources.USER);
+      return false;
+    }
+  },
   'table-cell-line delete': {
     key: 'Delete',
     format: ['table-cell-line'],
@@ -2963,7 +3216,6 @@ quill_better_table_BetterTable.keyboardBindings = {
       if (range.length > 0) {
         this.quill.scroll.deleteAt(range.index, range.length); // So we do not trigger text-change
       }
-
       const lineFormats = Object.keys(context.format).reduce((formats, format) => {
         if (this.quill.scroll.query(format, Scope.BLOCK) && !Array.isArray(context.format[format])) {
           formats[format] = context.format[format];
@@ -3068,13 +3320,94 @@ function isInTableCell(current) {
 /* harmony default export */ var quill_better_table = __webpack_exports__["default"] = (quill_better_table_BetterTable);
 
 /***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+// Module
+var code = "<?xml version=\"1.0\" standalone=\"no\"?><!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\"><svg class=\"icon\" width=\"20px\" height=\"20px\" viewBox=\"0 0 1024 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"#595959\" d=\"M73.142857 336.64h526.628572v43.885714H73.142857zM73.142857 643.657143h526.628572v43.885714H73.142857zM336.457143 117.028571h43.885714v789.942858h-43.885714zM204.8 73.142857h614.4a131.657143 131.657143 0 0 1 131.657143 131.657143v614.4a131.657143 131.657143 0 0 1-131.657143 131.657143H204.8A131.657143 131.657143 0 0 1 73.142857 819.2V204.8A131.84 131.84 0 0 1 204.8 73.142857z m0 43.885714a87.771429 87.771429 0 0 0-87.771429 87.771429v614.4a87.771429 87.771429 0 0 0 87.771429 87.771429h614.4a87.771429 87.771429 0 0 0 87.771429-87.771429V204.8a87.771429 87.771429 0 0 0-87.771429-87.771429zM819.2 73.142857h-219.428571v877.714286h219.428571a131.657143 131.657143 0 0 0 131.657143-131.657143V204.8A131.84 131.84 0 0 0 819.2 73.142857z m44.068571 460.982857h-65.828571v65.828572H753.371429v-65.828572h-65.828572V490.057143h65.828572v-65.828572h44.068571v65.828572h65.828571z\"/></svg>";
+// Exports
+module.exports = code;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+// Module
+var code = "<?xml version=\"1.0\" standalone=\"no\"?><!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\"><svg class=\"icon\" width=\"20px\" height=\"20.00px\" viewBox=\"0 0 1024 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"#595959\" d=\"M380.342857 336.457143h526.811429v43.885714H380.342857z m0 307.2h526.811429v43.885714H380.342857zM643.657143 117.028571h43.885714v789.942858h-43.885714zM204.8 73.142857h614.582857A131.474286 131.474286 0 0 1 950.857143 204.8v614.4a131.657143 131.657143 0 0 1-131.657143 131.657143H204.8A131.657143 131.657143 0 0 1 73.142857 819.2V204.8A131.657143 131.657143 0 0 1 204.8 73.142857z m0 43.885714a87.588571 87.588571 0 0 0-87.588571 87.771429v614.4a87.588571 87.588571 0 0 0 87.588571 87.771429h614.582857a87.771429 87.771429 0 0 0 87.771429-87.771429V204.8a87.771429 87.771429 0 0 0-87.771429-87.771429zM204.8 73.142857A131.657143 131.657143 0 0 0 73.142857 204.8v614.4a131.657143 131.657143 0 0 0 131.657143 131.657143h219.428571V73.142857z m131.84 460.8h-65.828571v65.828572h-43.885715v-65.828572h-65.828571v-43.885714h65.828571v-65.828572h43.885715v65.828572h65.828571z\"/></svg>";
+// Exports
+module.exports = code;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+// Module
+var code = "<?xml version=\"1.0\" standalone=\"no\"?><!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\"><svg class=\"icon\" width=\"20px\" height=\"20.00px\" viewBox=\"0 0 1024 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"#595959\" d=\"M73.142857 599.771429h877.714286v43.885714H73.142857zM336.457143 380.342857h43.885714v526.628572h-43.885714z m307.2 0h43.885714v526.628572h-43.885714zM204.8 73.142857h614.4a131.657143 131.657143 0 0 1 131.657143 131.657143v614.4a131.657143 131.657143 0 0 1-131.657143 131.657143H204.8A131.657143 131.657143 0 0 1 73.142857 819.2V204.8A131.657143 131.657143 0 0 1 204.8 73.142857z m0 43.885714a87.771429 87.771429 0 0 0-87.771429 87.771429v614.4a87.588571 87.588571 0 0 0 87.771429 87.771429h614.4a87.588571 87.588571 0 0 0 87.771429-87.771429V204.8a87.771429 87.771429 0 0 0-87.771429-87.771429zM819.2 73.142857H204.8A131.657143 131.657143 0 0 0 73.142857 204.8v219.428571h877.714286v-219.428571A131.657143 131.657143 0 0 0 819.2 73.142857z m-219.428571 197.485714h-65.828572v65.828572h-43.885714v-65.828572h-65.828572v-43.885714h65.828572V160.914286h43.885714v65.828571h65.828572z\"/></svg>";
+// Exports
+module.exports = code;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+// Module
+var code = "<?xml version=\"1.0\" standalone=\"no\"?><!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\"><svg class=\"icon\" width=\"20px\" height=\"20.00px\" viewBox=\"0 0 1024 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"#595959\" d=\"M204.8 73.142857h614.4a131.657143 131.657143 0 0 1 131.657143 131.657143v614.4a131.657143 131.657143 0 0 1-131.657143 131.657143H204.8A131.657143 131.657143 0 0 1 73.142857 819.2V204.8A131.84 131.84 0 0 1 204.8 73.142857z m0 43.885714a87.771429 87.771429 0 0 0-87.771429 87.771429v614.4a87.771429 87.771429 0 0 0 87.771429 87.771429h614.4a87.771429 87.771429 0 0 0 87.771429-87.771429V204.8a87.771429 87.771429 0 0 0-87.771429-87.771429zM73.142857 336.457143h877.714286v44.068571H73.142857zM336.64 117.028571h43.885714v526.628572h-43.885714z m307.017143 0h44.068571v526.628572H643.657143zM73.142857 599.771429v219.428571a131.657143 131.657143 0 0 0 131.657143 131.657143h614.4a131.657143 131.657143 0 0 0 131.657143-131.657143v-219.428571z m526.628572 197.485714h-65.645715v65.828571H490.057143v-65.828571h-65.828572v-43.885714h65.828572v-65.828572h44.068571v65.828572h65.645715z\"/></svg>";
+// Exports
+module.exports = code;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+// Module
+var code = "<?xml version=\"1.0\" standalone=\"no\"?><!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\"><svg class=\"icon\" width=\"20px\" height=\"20.00px\" viewBox=\"0 0 1024 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"#595959\" d=\"M925.99596 99.038384c-25.470707-25.6-60.121212-39.822222-96.323233-39.822222H194.19798c-36.072727 0-70.723232 14.351515-96.323233 39.822222-25.6 25.6-39.822222 60.121212-39.822222 96.323232v635.474748c0 36.072727 14.351515 70.723232 39.822222 96.323232C123.474747 952.759596 158.125253 967.111111 194.19798 967.111111h635.474747c36.072727 0 70.723232-14.351515 96.323233-39.951515 25.6-25.6 39.951515-60.121212 39.951515-96.323232V195.361616c0-36.072727-14.351515-70.723232-39.951515-96.323232z m-277.850505 5.559596v226.909091H375.725253V104.59798h272.420202zM103.434343 195.361616c0-24.048485 9.567677-47.191919 26.634344-64.129293 17.066667-17.066667 40.080808-26.634343 64.129293-26.634343h136.145454v226.909091H103.434343V195.361616z m90.763637 726.367677c-24.048485 0-47.191919-9.567677-64.129293-26.634344-17.066667-17.066667-26.634343-40.080808-26.634344-64.129292V649.309091h226.909091v272.420202H194.19798z m181.527273 0V649.309091h272.290909v272.420202H375.725253z m544.711111-90.892929c0 24.048485-9.567677 47.191919-26.634344 64.129293-17.066667 17.066667-40.080808 26.634343-64.129293 26.634343H693.527273V649.309091h226.909091v181.527273zM693.527273 331.507071V104.59798h136.145454c24.048485 0 47.191919 9.567677 64.129293 26.634343 17.066667 17.066667 26.634343 40.080808 26.634344 64.129293v136.145455H693.527273z\"/></svg>";
+// Exports
+module.exports = code;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports) {
+
+// Module
+var code = "<?xml version=\"1.0\" standalone=\"no\"?><!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\"><svg class=\"icon\" width=\"20px\" height=\"20.00px\" viewBox=\"0 0 1024 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"#595959\" d=\"M336.457143 73.142857h43.885714v877.714286h-43.885714z m307.382857 0h43.702857v877.714286h-43.702857z m-438.857143 0h614.4A131.657143 131.657143 0 0 1 950.857143 204.8v614.4a131.474286 131.474286 0 0 1-131.474286 131.657143h-614.4A131.657143 131.657143 0 0 1 73.142857 819.2V204.8A131.84 131.84 0 0 1 204.982857 73.142857z m0 43.885714a87.588571 87.588571 0 0 0-87.771428 87.771429v614.4a87.588571 87.588571 0 0 0 87.771428 87.771429h614.4a87.771429 87.771429 0 0 0 87.771429-87.771429V204.8a87.771429 87.771429 0 0 0-87.771429-87.771429zM73.142857 336.457143h877.714286v307.2H73.142857z m292.571429 43.885714v219.428572h292.571428v-219.428572z\"/></svg>";
+// Exports
+module.exports = code;
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
+
+// Module
+var code = "<?xml version=\"1.0\" standalone=\"no\"?><!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\"><svg class=\"icon\" width=\"20px\" height=\"20.00px\" viewBox=\"0 0 1024 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"#595959\" d=\"M925.996 99.038c-25.47-25.6-60.121-39.822-96.323-39.822H194.198c-75.12 0.13-136.016 61.026-136.145 136.146v635.345c0 36.073 14.351 70.723 39.822 96.323 25.6 25.73 60.25 40.081 96.323 40.081h635.475c36.072 0 70.723-14.351 96.323-39.951 25.6-25.6 39.951-60.122 39.951-96.324V195.362c0-36.073-14.351-70.724-39.951-96.324z m-365.77 494.287L512 545.228l-48.226 48.097-32.194-31.935 48.355-48.226-48.226-48.097 32.194-32.194L512 480.97l48.097-48.097 32.194 32.194-48.097 48.097 48.226 48.226-32.194 31.935zM103.434 195.362c0-24.049 9.568-47.192 26.635-64.13 17.066-17.066 40.08-26.634 64.129-26.634h136.145v226.91H103.434V195.361z m0 181.656h226.91V649.31h-226.91V377.02z m90.764 544.84c-24.049 0-47.192-9.567-64.13-26.634-17.066-17.066-26.634-40.08-26.634-64.258V694.69h226.91v227.168H194.197z m726.238-90.763c0 24.048-9.438 47.192-26.505 64.259-17.066 17.066-40.21 26.634-64.258 26.505H693.527V694.69h226.91v136.404z m0-181.786H693.527V377.02h226.91v272.29zM693.527 331.507V104.598h136.146c24.048 0 47.192 9.438 64.258 26.505 17.067 17.067 26.635 40.21 26.505 64.259v136.145H693.527z\"/></svg>";
+// Exports
+module.exports = code;
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports) {
+
+// Module
+var code = "<?xml version=\"1.0\" standalone=\"no\"?><!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\"><svg class=\"icon\" width=\"20px\" height=\"20.00px\" viewBox=\"0 0 1024 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"#595959\" d=\"M925.99596 99.038384c-25.470707-25.6-60.121212-39.822222-96.323233-39.822222H194.19798c-36.072727 0-70.723232 14.351515-96.323233 39.822222-25.6 25.6-39.822222 60.121212-39.822222 96.323232v635.474748c0 36.072727 14.351515 70.723232 39.822222 96.323232C123.474747 952.759596 158.125253 967.111111 194.19798 967.111111h635.474747c36.072727 0 70.723232-14.351515 96.323233-39.951515 25.6-25.6 39.951515-60.121212 39.951515-96.323232V195.361616c0-36.072727-14.351515-70.723232-39.951515-96.323232z m-550.270707 5.559596h272.290909v227.167677H375.725253V104.59798z m56.242424 360.468687l31.935353-32.19394 48.09697 48.226263 48.09697-48.226263 32.193939 32.19394-48.09697 48.096969 48.226263 48.226263-32.193939 31.935354-48.226263-48.09697-48.226263 48.09697-31.935353-31.935354 48.226262-48.226263-48.096969-48.096969zM103.434343 195.361616c0-24.048485 9.567677-47.191919 26.634344-64.129293 17.066667-17.066667 40.080808-26.634343 64.129293-26.634343h136.145454v227.167677H103.434343V195.361616z m817.002021 635.733333c0 24.048485-9.567677 47.191919-26.634344 64.258586-17.066667 17.066667-40.080808 26.634343-64.129293 26.634344H194.19798c-24.048485 0-47.191919-9.567677-64.258586-26.634344C112.872727 878.157576 103.434343 855.014141 103.434343 830.836364V694.690909h226.909091v226.909091h45.381819V694.690909h272.290909v226.909091h45.381818V694.690909h226.909091v136.40404z m0-499.329292H693.527273V104.59798h136.145454c24.048485 0 47.191919 9.567677 64.129293 26.634343 17.066667 17.066667 26.634343 40.080808 26.634344 64.129293v136.404041z\"/></svg>";
+// Exports
+module.exports = code;
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports) {
+
+// Module
+var code = "<?xml version=\"1.0\" standalone=\"no\"?><!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\"><svg class=\"icon\" width=\"20px\" height=\"20.00px\" viewBox=\"0 0 1024 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"#595959\" d=\"M764.42168889 830.5152c0 30.23530667-24.61013333 54.84430222-54.84316444 54.84430222H314.42147555c-30.23416889 0-54.84316445-24.61013333-54.84316444-54.84430222V248.32796445h504.84337778v582.18723555zM369.26577778 149.89084445c0-6.32832 4.92202667-11.25034667 11.25034667-11.25034667H644.18702222c6.32832 0 11.25034667 4.92202667 11.25034667 11.25034667v33.04675555H369.26577778V149.89084445z m559.68768 33.04675555H720.82773333V149.89084445c0-42.1888-34.45191111-76.64071111-76.64071111-76.64071112H380.51612445c-42.1888 0-76.64071111 34.45191111-76.64071112 76.64071112v33.04675555h-208.82773333c-18.28181333 0-33.04789333 14.76608-33.04789333 33.04675555s14.76608 33.04675555 33.04675555 33.04675556h98.43825778v581.48408889c0 66.79779555 54.14001778 120.93781333 120.93667555 120.93781333h395.1570489c66.79665778 0 120.93667555-54.14001778 120.93667555-120.93781333V248.32796445h98.43825778c18.28067555 0 33.04675555-14.76494222 33.04675555-33.04675556s-14.76608-32.34360889-33.04675555-32.34360889zM512 786.21923555c18.28181333 0 33.04675555-14.76608 33.04675555-33.04789333v-351.56195555c0-18.28181333-14.76494222-33.04675555-33.04675555-33.04675556s-33.04675555 14.76494222-33.04675555 33.04675556v351.56195555c0 18.28181333 14.76494222 33.04789333 33.04675555 33.04789333m-153.98456889 0c18.28181333 0 33.04675555-14.76608 33.04675556-33.04789333v-351.56195555c0-18.28181333-14.76494222-33.04675555-33.04675556-33.04675556s-33.04675555 14.76494222-33.04675556 33.04675556v351.56195555c0.70314667 18.28181333 15.46922667 33.04789333 33.04675556 33.04789333m307.96913778 0c18.28067555 0 33.04675555-14.76608 33.04675556-33.04789333v-351.56195555c0-18.28181333-14.76608-33.04675555-33.04675556-33.04675556s-33.04675555 14.76494222-33.04675556 33.04675556v351.56195555c0 18.28181333 14.76494222 33.04789333 33.04675556 33.04789333\"/></svg>";
+// Exports
+module.exports = code;
+
+/***/ }),
 /* 11 */,
 /* 12 */,
 /* 13 */,
 /* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(10);
+module.exports = __webpack_require__(1);
 
 
 /***/ })
