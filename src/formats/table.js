@@ -18,7 +18,7 @@ const CELL_DEFAULT = {
 }
 const ERROR_LIMIT = 5
 
-const TAGS_TO_IGNORE_FORMAT = ['header', 'code']
+const TAGS_TO_IGNORE_FORMAT = ['header', 'list', 'code']
 
 class TableCellLine extends Block {
   static create(value) {
@@ -65,16 +65,8 @@ class TableCellLine extends Block {
       } else {
         this.domNode.removeAttribute('data-cell-bg')
       }
-    } else if (name === 'list') {
-      if (!value) {
-        super.format(name, value)
-        return
-      }
-      const fmt = TableCellLine.formats(this.domNode)
-      const { row, cell, rowspan, colspan } = fmt
-      super.format(name, { value, row, cell, rowspan, colspan, 'cell-bg': fmt['cell-bg'] })
     } else if (TAGS_TO_IGNORE_FORMAT.includes(name)) {
-      // Cancel formatting to avoid table breaking (header, code still blocked)
+      // Cancel formatting to avoid table breaking
       // super.format(name, value)
     } else if (name === 'table-cell-line') {
       if (!value) return;
@@ -112,36 +104,17 @@ TableCellLine.blotName = "table-cell-line"
 TableCellLine.className = "qlbt-cell-line"
 TableCellLine.tagName = "P"
 
-// Returns the `cell` identity of a child blot on the specified side ('head' | 'tail').
-// For list-container children, looks into the boundary <li> on the matching side
-// and reads identity via TableList.identity() — since <li>.formats() now returns
-// the native scalar list type, not the identity-carrying object.
-function getBoundaryCellId (child, side) {
-  if (!child || !child.statics) return undefined
-  if (child.statics.blotName === 'list-container') {
-    const li = child.children && child.children[side]
-    if (!li || !li.statics) return undefined
-    // TableList exposes static identity(domNode) — fall back gracefully if absent.
-    const identityFn = li.statics.identity
-    const id = typeof identityFn === 'function' ? identityFn(li.domNode) : {}
-    return id.cell
-  }
-  const fmt = child.formats()[child.statics.blotName]
-  return fmt && fmt.cell
-}
-
 class TableCell extends Container {
   checkMerge() {
     if (super.checkMerge() && this.next.children.head != null) {
-      const thisHead = getBoundaryCellId(this.children.head, 'head')
-      const thisTail = getBoundaryCellId(this.children.tail, 'tail')
-      const nextHead = getBoundaryCellId(this.next.children.head, 'head')
-      const nextTail = getBoundaryCellId(this.next.children.tail, 'tail')
-      if (!thisHead || !thisTail || !nextHead || !nextTail) return false
+      const thisHead = this.children.head.formats()[this.children.head.statics.blotName]
+      const thisTail = this.children.tail.formats()[this.children.tail.statics.blotName]
+      const nextHead = this.next.children.head.formats()[this.next.children.head.statics.blotName]
+      const nextTail = this.next.children.tail.formats()[this.next.children.tail.statics.blotName]
       return (
-        thisHead === thisTail &&
-        thisHead === nextHead &&
-        thisHead === nextTail
+        thisHead.cell === thisTail.cell &&
+        thisHead.cell === nextHead.cell &&
+        thisHead.cell === nextTail.cell
       )
     }
     return false
