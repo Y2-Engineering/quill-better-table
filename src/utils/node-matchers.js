@@ -15,7 +15,21 @@ export function matchTableCell (node, delta, scroll) {
   const cellId = cells.indexOf(node) + 1;
   const colspan = node.getAttribute('colspan') || false
   const rowspan = node.getAttribute('rowspan') || false
-  const cellBg = node.getAttribute('data-cell-bg') || node.style.backgroundColor // The td from external table has no 'data-cell-bg' 
+  const cellBg = node.getAttribute('data-cell-bg') || node.style.backgroundColor // The td from external table has no 'data-cell-bg'
+
+  // TableList.formats only reports the scalar list type (data-list); the cell
+  // identity carried on each <li data-row/data-cell> is dropped by the time the
+  // delta reaches us. Recover it from the first <li> so list ops align with
+  // sibling non-list ops on the same <tr> — otherwise TableRow.checkMerge sees
+  // mismatched row attrs and splits the row on paste.
+  const firstLi = node.querySelector('li[data-row]')
+  const listIdentity = firstLi ? {
+    row: firstLi.getAttribute('data-row') || rowId,
+    cell: firstLi.getAttribute('data-cell') || cellId,
+    rowspan: firstLi.getAttribute('data-rowspan') || rowspan,
+    colspan: firstLi.getAttribute('data-colspan') || colspan,
+    'cell-bg': firstLi.getAttribute('data-cell-bg') || cellBg
+  } : null
 
   // bugfix: empty table cells copied from other place will be removed unexpectedly
   if (delta.length() === 0) {
@@ -66,11 +80,20 @@ export function matchTableCell (node, delta, scroll) {
       if (attrs.list) {
         // <li> from source — keep list, carry cell identity on the li attribute object,
         // do NOT wrap as table-cell-line.
+        // Resolve row from <td>'s attrs.table (preferred — survives Quill's
+        // getSemanticHTML which strips data-row from <li>) → first <li data-row>
+        // → numeric rowId. The list cell must end up with the same row id as
+        // sibling non-list cells in the same TR; otherwise TableRow.checkMerge
+        // splits the row on paste.
         const listValue = typeof attrs.list === 'string' ? attrs.list : (attrs.list && attrs.list.value)
+        const tableAttrs = attrs.table || {}
+        const resolvedRow = tableAttrs.row || (listIdentity && listIdentity.row) || rowId
+        const identity = Object.assign({}, listIdentity || baseIdentity, { row: resolvedRow })
         newDelta.insert(op.insert, Object.assign(
           {},
-          { row: rowId },
-          { list: Object.assign({ value: listValue }, baseIdentity) },
+          { row: resolvedRow },
+          tableAttrs,
+          { list: Object.assign({ value: listValue }, identity) },
           _omit(attrs, ['table', 'table-cell-line', 'list', 'list-container', 'indent'])
         ))
       } else {
