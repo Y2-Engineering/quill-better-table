@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "7ad6e7cca50b0a9b53c1";
+/******/ 	var hotCurrentHash = "28d7188b91a6f339550d";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -2522,7 +2522,21 @@ function matchTableCell(node, delta, scroll) {
   const cellId = cells.indexOf(node) + 1;
   const colspan = node.getAttribute('colspan') || false;
   const rowspan = node.getAttribute('rowspan') || false;
-  const cellBg = node.getAttribute('data-cell-bg') || node.style.backgroundColor; // The td from external table has no 'data-cell-bg' 
+  const cellBg = node.getAttribute('data-cell-bg') || node.style.backgroundColor; // The td from external table has no 'data-cell-bg'
+
+  // TableList.formats only reports the scalar list type (data-list); the cell
+  // identity carried on each <li data-row/data-cell> is dropped by the time the
+  // delta reaches us. Recover it from the first <li> so list ops align with
+  // sibling non-list ops on the same <tr> — otherwise TableRow.checkMerge sees
+  // mismatched row attrs and splits the row on paste.
+  const firstLi = node.querySelector('li[data-row]');
+  const listIdentity = firstLi ? {
+    row: firstLi.getAttribute('data-row') || rowId,
+    cell: firstLi.getAttribute('data-cell') || cellId,
+    rowspan: firstLi.getAttribute('data-rowspan') || rowspan,
+    colspan: firstLi.getAttribute('data-colspan') || colspan,
+    'cell-bg': firstLi.getAttribute('data-cell-bg') || cellBg
+  } : null;
 
   // bugfix: empty table cells copied from other place will be removed unexpectedly
   if (delta.length() === 0) {
@@ -2575,13 +2589,23 @@ function matchTableCell(node, delta, scroll) {
       if (attrs.list) {
         // <li> from source — keep list, carry cell identity on the li attribute object,
         // do NOT wrap as table-cell-line.
+        // Resolve row from <td>'s attrs.table (preferred — survives Quill's
+        // getSemanticHTML which strips data-row from <li>) → first <li data-row>
+        // → numeric rowId. The list cell must end up with the same row id as
+        // sibling non-list cells in the same TR; otherwise TableRow.checkMerge
+        // splits the row on paste.
         const listValue = typeof attrs.list === 'string' ? attrs.list : attrs.list && attrs.list.value;
+        const tableAttrs = attrs.table || {};
+        const resolvedRow = tableAttrs.row || listIdentity && listIdentity.row || rowId;
+        const identity = Object.assign({}, listIdentity || baseIdentity, {
+          row: resolvedRow
+        });
         newDelta.insert(op.insert, Object.assign({}, {
-          row: rowId
-        }, {
+          row: resolvedRow
+        }, tableAttrs, {
           list: Object.assign({
             value: listValue
-          }, baseIdentity)
+          }, identity)
         }, _omit(attrs, ['table', 'table-cell-line', 'list', 'list-container', 'indent'])));
       } else {
         newDelta.insert(op.insert, Object.assign({}, Object.assign({}, {
@@ -3409,7 +3433,7 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
     if(true) {
-      // 1777029182175
+      // 1777973768626
       var cssReload = __webpack_require__(12)(module.i, {"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
