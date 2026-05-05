@@ -60,28 +60,43 @@ export function matchTableCell (node, delta, scroll) {
   return delta.reduce((newDelta, op) => {
     if (op.insert && typeof op.insert === 'string' &&
       op.insert.startsWith('\n')) {
-      newDelta.insert(op.insert, Object.assign(
-        {},
-        Object.assign({}, { row: rowId }, op.attributes.table),
-        { 'table-cell-line': { row: rowId, cell: cellId, rowspan, colspan, 'cell-bg': cellBg } },
-        _omit(op.attributes, ['table'])
-      ))
+      const attrs = op.attributes || {}
+      const baseIdentity = { row: rowId, cell: cellId, rowspan, colspan, 'cell-bg': cellBg }
+
+      if (attrs.list) {
+        // <li> from source — keep list, carry cell identity on the li attribute object,
+        // do NOT wrap as table-cell-line.
+        const listValue = typeof attrs.list === 'string' ? attrs.list : (attrs.list && attrs.list.value)
+        newDelta.insert(op.insert, Object.assign(
+          {},
+          { row: rowId },
+          { list: Object.assign({ value: listValue }, baseIdentity) },
+          _omit(attrs, ['table', 'table-cell-line', 'list', 'list-container', 'indent'])
+        ))
+      } else {
+        newDelta.insert(op.insert, Object.assign(
+          {},
+          Object.assign({}, { row: rowId }, attrs.table),
+          { 'table-cell-line': baseIdentity },
+          _omit(attrs, ['table', 'list-container', 'indent'])
+        ))
+      }
     } else {
       // bugfix: remove background attr from the delta of table cell
       //         to prevent unexcepted background attr append.
       if (op.attributes && op.attributes.background && op.attributes.background === convertToHex(cellBg)) {
         newDelta.insert(op.insert, Object.assign(
           {},
-          _omit(op.attributes, ['table', 'table-cell-line', 'background'])
+          _omit(op.attributes, ['table', 'table-cell-line', 'list-container', 'background', 'indent'])
         ))
       } else {
         newDelta.insert(op.insert, Object.assign(
           {},
-          _omit(op.attributes, ['table', 'table-cell-line'])
+          _omit(op.attributes, ['table', 'table-cell-line', 'list-container', 'indent'])
         ))
       }
     }
-    
+
     return newDelta
   }, new Delta())
 }
@@ -134,27 +149,46 @@ export function matchTableHeader (node, delta, scroll) {
 
       lines.forEach(text => {
         text === '\n'
-        ? newDelta.insert('\n', { 'table-cell-line': { row: rowId, cell: cellId, rowspan, colspan } })
-        : newDelta.insert(text, op.attributes)
+        // Include table-cell-line marker to keep adjacent inserts from compositing —
+        // the second reduce below will route list ops to a list branch and rewrite
+        // table-cell-line for the rest.
+        ? newDelta.insert('\n', Object.assign({}, op.attributes || {}, {
+            'table-cell-line': { row: rowId, cell: cellId, rowspan, colspan }
+          }))
+        : newDelta.insert(text, _omit(op.attributes, ['indent']))
       })
     } else {
       newDelta.insert(op.insert, op.attributes)
     }
-    
+
     return newDelta
   }, new Delta())
 
   return delta.reduce((newDelta, op) => {
     if (op.insert && typeof op.insert === 'string' &&
       op.insert.startsWith('\n')) {
-      newDelta.insert(op.insert, Object.assign(
-        {},
-        { 'table-cell-line': { row: rowId, cell: cellId, rowspan, colspan } }
-      ))
+      const attrs = op.attributes || {}
+      const baseIdentity = { row: rowId, cell: cellId, rowspan, colspan }
+
+      if (attrs.list) {
+        const listValue = typeof attrs.list === 'string' ? attrs.list : (attrs.list && attrs.list.value)
+        newDelta.insert(op.insert, Object.assign(
+          {},
+          { row: rowId },
+          { list: Object.assign({ value: listValue }, baseIdentity) },
+          _omit(attrs, ['table', 'table-cell-line', 'list', 'list-container', 'indent'])
+        ))
+      } else {
+        newDelta.insert(op.insert, Object.assign(
+          {},
+          { row: rowId },
+          { 'table-cell-line': baseIdentity }
+        ))
+      }
     } else {
       newDelta.insert(op.insert, Object.assign(
         {},
-        _omit(op.attributes, ['table', 'table-cell-line'])
+        _omit(op.attributes, ['table', 'table-cell-line', 'list-container', 'indent'])
       ))
     }
 
